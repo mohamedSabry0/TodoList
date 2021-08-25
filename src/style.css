@@ -4,6 +4,11 @@
   background: no-repeat url('./images/drag.png');
   background-size: contain;
 }
+
 .border-bottom-grey {
   border-bottom: 1px #ddd solid;
+}
+
+.bg-grey {
+  background-color: #eee;
 }

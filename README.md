@@ -8,10 +8,6 @@
 - HTML
 - CSS
 
-## Live Demo
-
-[Live Demo Link](https://mohamedsabry0.github.io/TodoList/)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -23,7 +19,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Run the command in the folder you want to store the project `git clone https://github.com/nelsinofrancisco/awesome_books.git`
+- Run the command in the folder you want to store the project `git clone git@github.com:mohamedSabry0/TodoList.git`
 
 ### Install
 
@@ -31,17 +27,9 @@ To get a local copy up and running follow these simple example steps.
 
 ### Run tests
 
-- Test's are runned automatically with github workflows or you can run it locally, again check out this article to know more about it [article](https://github.com/microverseinc/linters-config) ;
+- Tests' are run automatically with github workflows or you can run it locally, again check out this article to know more about it [article](https://github.com/microverseinc/linters-config).
 
-### Deployment
-
-- This project is Deployed using Git Hub Pages!
-
-## Authors
-
-👤 **Nelsino Francisco**
-
-- GitHub: [@nelsinofrancisco](https://github.com/nelsinofrancisco)
+## Author
 
 👤 **Mohamed Sabry**
 

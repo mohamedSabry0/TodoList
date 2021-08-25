@@ -22,12 +22,12 @@ const sortByIndex = (a, b) => a.index - b.index;
 
 const createTask = (task) => {
   const taskText = document.createElement('p');
-  taskText.classList.add('m-0');
+  taskText.classList.add('m-0', 'px-2');
   taskText.textContent = task.description;
   const completedCheck = document.createElement('input');
   completedCheck.type = 'checkbox';
   const dragBtn = document.createElement('div');
-  dragBtn.classList.add('drag-btn');
+  dragBtn.classList.add('drag-btn', 'ms-auto', 'me-2');
   return [completedCheck, taskText, dragBtn];
 };
 
@@ -39,7 +39,7 @@ const populateList = (list) => {
     const li = document.createElement('li');
 
     createTask(task).forEach((el) => li.appendChild(el));
-    li.className = 'd-flex';
+    li.className = 'd-flex p-2 border-bottom';
     ul.appendChild(li);
   });
 };

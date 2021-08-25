@@ -3,9 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webpack Exercise</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <title>Todo List App</title>
   </head>
   <body>
-    <h1>Hello webpack server!</h1>
+    <div
+      class="
+        d-flex
+        flex-column
+        align-items-center
+        w-50
+        m-auto
+        text-center
+        border-1 border
+      "
+    >
+      <p class="border-bottom w-100 text-start p-2">Minimalist Todo App</p>
+      <input
+        type="text"
+        name="description"
+        placeholder="Add to your list..."
+        class="w-100 task-description-input border-0 border-bottom pb-2 px-2"
+      />
+      <ul class="tasks-container w-100 m-0"></ul>
+      <div class="clear-all w-100 p-3 bg-grey text-muted">
+        Clear All Completed
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

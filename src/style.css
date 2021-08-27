@@ -12,3 +12,8 @@
 .bg-grey {
   background-color: #eee;
 }
+
+.completed {
+  color: #999;
+  text-decoration: line-through;
+}

@@ -1,13 +1,14 @@
-import { sortByIndex } from './helpers';
-import { changeStatus } from './complete_action';
+import sortByIndex from './helpers.js';
+import changeStatus from './complete_action.js';
 
-export const UI = (() => {
+const UI = (() => {
   const createTask = (task) => {
     const taskText = document.createElement('p');
     taskText.classList.add('m-0', 'px-2');
     taskText.textContent = task.description;
     const completedCheck = document.createElement('input');
     completedCheck.type = 'checkbox';
+    completedCheck.checked = task.completed;
     completedCheck.className = 'completed-input';
     completedCheck.addEventListener('change', () => {
       changeStatus(task);
@@ -19,7 +20,6 @@ export const UI = (() => {
 
   const populateList = (list) => {
     const ul = document.querySelector('.tasks-container');
-    ul.classList.add('list-unstyled');
     list.sort(sortByIndex);
     list.forEach((task) => {
       const li = document.createElement('li');
@@ -34,3 +34,5 @@ export const UI = (() => {
     populateList,
   };
 })();
+
+export default UI;

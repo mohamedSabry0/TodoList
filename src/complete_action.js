@@ -1,6 +1,9 @@
+import storage from './store.js';
+
 const changeStatus = (task) => {
+  const taskIndex = task.index;
   task.completed = !task.completed;
-  console.log(task);
+  storage.set(task, taskIndex);
 };
 
-export { changeStatus };
+export default changeStatus;

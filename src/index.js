@@ -1,22 +1,7 @@
 import './style.css';
-import { UI } from './ui';
+import UI from './ui.js';
+import storage from './store.js';
 
-const mockList = [
-  {
-    description: 'task 4',
-    completed: true,
-    index: 4,
-  },
-  {
-    description: 'task 2',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'task 3',
-    completed: false,
-    index: 3,
-  },
-];
+storage.init();
 
-UI.populateList(mockList);
+UI.populateList(storage.get());

@@ -1,23 +1,5 @@
 const storage = (() => {
-  const mockList = [
-    {
-      description: 'task 4',
-      completed: true,
-      index: 4,
-    },
-    {
-      description: 'task 2',
-      completed: false,
-      index: 2,
-    },
-    {
-      description: 'task 3',
-      completed: false,
-      index: 3,
-    },
-  ];
-
-  const get = () => JSON.parse(localStorage.getItem('list')) || mockList;
+  const get = () => JSON.parse(localStorage.getItem('list')) || [];
 
   const set = (task = null, oldIndex = -1) => {
     const checkList = () => {
@@ -38,14 +20,10 @@ const storage = (() => {
     localStorage.setItem('list', JSON.stringify(list));
   };
 
-  const clearAll = () => {
-    localStorage.clear();
-  };
   return {
     set,
     get,
     init,
-    clearAll,
     setList,
   };
 })();

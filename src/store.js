@@ -34,6 +34,10 @@ const storage = (() => {
     set();
   };
 
+  const setList = (list) => {
+    localStorage.setItem('list', JSON.stringify(list));
+  };
+
   const clearAll = () => {
     localStorage.clear();
   };
@@ -42,6 +46,7 @@ const storage = (() => {
     get,
     init,
     clearAll,
+    setList,
   };
 })();
 

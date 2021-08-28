@@ -3,7 +3,7 @@ import changeStatus from './complete_action.js';
 import storage from './store.js';
 
 const UI = (() => {
-  let createTask;
+  let createTaskCard;
   const populateList = (list) => {
     const ul = document.querySelector('.tasks-container');
     ul.innerHTML = '';
@@ -11,12 +11,13 @@ const UI = (() => {
     list.forEach((task) => {
       const li = document.createElement('li');
 
-      createTask(task).forEach((el) => li.appendChild(el));
+      createTaskCard(task).forEach((el) => li.appendChild(el));
       li.className = 'd-flex p-2 border-bottom';
       ul.appendChild(li);
     });
   };
-  createTask = (task) => {
+
+  createTaskCard = (task) => {
     const taskText = document.createElement('p');
     taskText.textContent = task.description;
     const completedCheck = document.createElement('input');

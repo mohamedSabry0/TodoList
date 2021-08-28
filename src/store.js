@@ -15,6 +15,7 @@ const storage = (() => {
   const init = () => {
     set();
   };
+  const getByIndex = (index) => get().filter((t) => t.index === index)[0];
 
   const setList = (list) => {
     localStorage.setItem('list', JSON.stringify(list));
@@ -25,6 +26,7 @@ const storage = (() => {
     get,
     init,
     setList,
+    getByIndex,
   };
 })();
 

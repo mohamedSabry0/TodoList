@@ -17,3 +17,11 @@
   color: #999;
   text-decoration: line-through;
 }
+
+.delete-btn {
+  cursor: pointer;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}

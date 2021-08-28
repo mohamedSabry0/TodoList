@@ -1,6 +1,7 @@
 import sortByIndex from './helpers.js';
 import changeStatus from './complete_action.js';
 import storage from './store.js';
+import editListeners from './edit.js';
 
 const UI = (() => {
   let createTaskCard;
@@ -15,6 +16,7 @@ const UI = (() => {
       li.className = 'd-flex p-2 border-bottom';
       ul.appendChild(li);
     });
+    editListeners(UI, removeFn);
   };
 
   createTaskCard = (task, removeFn) => {
@@ -24,8 +26,8 @@ const UI = (() => {
     completedCheck.type = 'checkbox';
     completedCheck.checked = task.completed;
     taskText.className = task.completed
-      ? 'm-0 px-2 me-auto completed'
-      : 'm-0 me-auto px-2';
+      ? 'task-text m-0 px-2 flex-grow text-start completed'
+      : 'task-text m-0 flex-grow text-start px-2';
     completedCheck.className = 'completed-input';
     completedCheck.addEventListener('change', () => {
       changeStatus(task);

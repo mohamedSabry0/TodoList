@@ -3,6 +3,7 @@
   height: 20px;
   background: no-repeat url('./images/icons8-trash.svg');
   background-size: contain;
+  cursor: pointer;
 }
 
 .border-bottom-grey {
@@ -16,10 +17,6 @@
 .completed {
   color: #999;
   text-decoration: line-through;
-}
-
-.delete-btn {
-  cursor: pointer;
 }
 
 .flex-grow {

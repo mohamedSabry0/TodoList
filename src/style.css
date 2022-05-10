@@ -1,8 +1,9 @@
-.drag-btn {
+.delete-btn {
   width: 20px;
   height: 20px;
-  background: no-repeat url('./images/drag.png');
+  background: no-repeat url('./images/icons8-trash.svg');
   background-size: contain;
+  cursor: pointer;
 }
 
 .border-bottom-grey {
@@ -16,4 +17,12 @@
 .completed {
   color: #999;
   text-decoration: line-through;
+}
+
+.clear-all {
+  cursor: pointer;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
